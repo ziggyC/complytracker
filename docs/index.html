@@ -4,24 +4,234 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TwinForts - Decentralized World for Innovative Open-Source Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: #fafafa;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            color: #1A1A1A;
+        }
+
+        header nav a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #545454;
+            font-size: 16px;
+        }
+
+        header nav a:hover {
+            color: #018C8D;
+        }
+
+        /* Hero Section */
+        section.hero {
+            text-align: center;
+            padding: 100px 50px;
+            background-color: #fff;
+        }
+
+        section.hero h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px;
+            color: #1A1A1A;
+            margin-bottom: 20px;
+        }
+
+        section.hero p {
+            font-size: 18px;
+            color: #545454;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        section.hero button {
+            padding: 15px 30px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #018C8D;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        section.hero button:hover {
+            background-color: #016b6c;
+        }
+
+        /* What We Do Section */
+        section#what-we-do {
+            padding: 50px;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        section#what-we-do h3,
+        section#what-we-offer h3,
+        section#why-choose-us h3,
+        section#contact h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            color: #1A1A1A;
+            margin-bottom: 30px;
+        }
+
+        section#what-we-do p,
+        section#what-we-offer p,
+        section#why-choose-us p,
+        section#contact p {
+            font-size: 16px;
+            color: #545454;
+            margin-bottom: 20px;
+        }
+
+        section#what-we-do p strong {
+            color: #1A1A1A;
+        }
+
+        /* What We Offer Section */
+        section#what-we-offer {
+            padding: 50px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        section#what-we-offer .offer-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        section#what-we-offer .offer-grid div {
+            background-color: #fafafa;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: left;
+        }
+
+        section#what-we-offer .offer-grid h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            color: #1A1A1A;
+            margin-bottom: 10px;
+        }
+
+        /* Why Choose Us Section */
+        section#why-choose-us {
+            padding: 50px;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        section#why-choose-us .choose-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        section#why-choose-us .choose-grid div {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: left;
+        }
+
+        section#what-we-offer .offer-grid div,
+        section#why-choose-us .choose-grid div {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        section#why-choose-us .choose-grid h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            color: #1A1A1A;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        section#contact {
+            padding: 50px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        section#contact a {
+            color: #018C8D;
+            text-decoration: none;
+        }
+
+        section#contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Section */
+        footer {
+            padding: 20px 50px;
+            background-color: #fafafa;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #545454;
+        }
+
+        footer a {
+            margin-left: 10px;
+            text-decoration: none;
+            color: #545454;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            color: #018C8D;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <h1>TwinForts Research</h1>
         <nav>
-            <a href="#what-we-do">What We Do</a> |
-            <a href="#what-we-offer">What We Offer</a> |
-            <a href="#why-choose-us">Why Choose Us</a> |
+            <a href="#what-we-do">What We Do</a>
+            <a href="#what-we-offer">What We Offer</a>
+            <a href="#why-choose-us">Why Choose Us</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section>
+    <section class="hero">
         <h2>Decentralized World for<br>Innovative Open-Source Solutions</h2>
         <p>Driven by a commitment to open-source research, cutting-edge machine learning techniques, and innovative distributed systems.</p>
-        <a href="#contact"><button>Contact Us</button></a>
+        <button>Contact Us</button>
     </section>
 
     <!-- What We Do Section -->
@@ -36,30 +246,34 @@
     <section id="what-we-offer">
         <h3>What We Offer</h3>
         <p>We harness the power of cutting-edge technologies to advance human health and well-being.</p>
-        <div>
-            <h4>Drug Discovery</h4>
-            <p>By integrating advanced technologies such as artificial intelligence and high-throughput screening, we accelerate the pace of drug discovery and identification of novel drug candidates.</p>
-        </div>
-        <div>
-            <h4>Genomics</h4>
-            <p>Utilizing state-of-the-art sequencing technologies and analytical tools, we aim to uncover genetic variations and their implications on health and disease.</p>
-        </div>
-        <div>
-            <h4>Bioinformatics</h4>
-            <p>Our bioinformatics team leverages sophisticated algorithms and computational tools to extract meaningful insights, turning raw data into actionable information.</p>
+        <div class="offer-grid">
+            <div>
+                <h4>Drug Discovery</h4>
+                <p>By integrating advanced technologies such as artificial intelligence and high-throughput screening, we accelerate the pace of drug discovery and identification of novel drug candidates.</p>
+            </div>
+            <div>
+                <h4>Genomics</h4>
+                <p>Utilizing state-of-the-art sequencing technologies and analytical tools, we aim to uncover genetic variations and their implications on health and disease.</p>
+            </div>
+            <div>
+                <h4>Bioinformatics</h4>
+                <p>Our bioinformatics team leverages sophisticated algorithms and computational tools to extract meaningful insights, turning raw data into actionable information.</p>
+            </div>
         </div>
     </section>
 
     <!-- Why Choose Us Section -->
     <section id="why-choose-us">
         <h3>Why Choose Us?</h3>
-        <div>
-            <h4>Transparency and Collaboration</h4>
-            <p>By sharing our discoveries, tools, and methodologies, we promote transparency and foster global collaboration.</p>
-        </div>
-        <div>
-            <h4>Cutting-Edge Technology</h4>
-            <p>We harness the latest technologies to push the boundaries of what's possible in biotechnology, machine learning, and distributed systems.</p>
+        <div class="choose-grid">
+            <div>
+                <h4>Transparency and Collaboration</h4>
+                <p>By sharing our discoveries, tools, and methodologies, we promote transparency and foster global collaboration.</p>
+            </div>
+            <div>
+                <h4>Cutting-Edge Technology</h4>
+                <p>We harness the latest technologies to push the boundaries of what's possible in biotechnology, machine learning, and distributed systems.</p>
+            </div>
         </div>
     </section>
 
@@ -72,9 +286,9 @@
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 TwinForts. All rights reserved.</p>
-        <a href="#">Terms of Use</a> |
-        <a href="#">Privacy Policy</a> |
+        <p>© 2024 TwinForts. All rights reserved.</p>
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
         <a href="#">Cookies Policy</a>
     </footer>
 </body>
